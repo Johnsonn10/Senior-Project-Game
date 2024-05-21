@@ -9,10 +9,10 @@ In Firestorm: Rise of the Rebel, you will navigate through various levels and fa
 
 Features
 
-Intense first person shooter gameplay
-Multiple levels with increasing difficulty
-Various weapons to choose from, each with unique abilities
-Epic boss battles
+Intense first person shooter gameplay,
+Multiple levels with increasing difficulty,
+Various weapons to choose from, each with unique abilities,
+Epic boss battles,
 Engaging storyline that will keep you on the edge of your seat
 
 How to Play

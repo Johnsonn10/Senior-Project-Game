@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using UnityEditor.Experimental.GraphView;
 using UnityEngine;
 
 public class MouseMovement : MonoBehaviour
@@ -25,10 +26,10 @@ public class MouseMovement : MonoBehaviour
         float mouseX = Input.GetAxis("Mouse X") * mouseSensitivity * Time.deltaTime;
         float mouseY = Input.GetAxis("Mouse Y") * mouseSensitivity * Time.deltaTime;
 
-        xrotation += mouseY;
+        xrotation -= mouseY;
         xrotation = Mathf.Clamp(xrotation, topClamp, bottomClamp);
 
-        yrotation += mouseY;
+        yrotation += mouseX;
 
         transform.localRotation = Quaternion.Euler(xrotation, yrotation, 0f);
     }

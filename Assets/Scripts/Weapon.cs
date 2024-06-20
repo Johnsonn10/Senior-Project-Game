@@ -6,7 +6,6 @@ using UnityEngine;
 public class Weapon : MonoBehaviour
 {
     public Camera playerCamera;
-
     public bool isShooting, readytoShoot;
     bool allowReset = true;
     public float shootingDelay = 2f;
@@ -20,6 +19,8 @@ public class Weapon : MonoBehaviour
     public Transform bulletSpawn;
     public float bulletVelocity = 30;
     public float bulletPrefabLifeTime = 3f;
+
+    public GameObject muzzleEffect;
 
     public enum ShootingMode
     {
@@ -60,6 +61,10 @@ public class Weapon : MonoBehaviour
 
     private void FireWeapon()
     {
+        muzzleEffect.GetComponent<ParticleSystem>().Play();
+
+        SoundManager.Instance.shootingSound1911.Play();
+
         readytoShoot = false;
         Vector3 shootingDirection = CalculateDirectionAndSpread().normalized;
 

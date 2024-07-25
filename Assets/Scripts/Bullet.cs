@@ -22,6 +22,10 @@ public class Bullet : MonoBehaviour
 
             Destroy(gameObject);
         }
+        if (objectWeHit.gameObject.CompareTag("Enemy"))
+        {
+            Destroy(objectWeHit.gameObject);
+        }
     }
     void CreateBulletImpactEffect(Collision objectWeHit)
     {
@@ -36,6 +40,4 @@ public class Bullet : MonoBehaviour
         hole.transform.SetParent(objectWeHit.gameObject.transform);
 
     }
-
-
 }

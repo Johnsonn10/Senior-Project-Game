@@ -8,7 +8,7 @@ public class EnemySpawner : MonoBehaviour
 {
     public Wave[] waves;
 
-    [SerializeField] private float countdown;   //change to num of enemies later
+    [SerializeField] private float numOfEnemies;   //change to num of enemies later
     [SerializeField] private GameObject spawnPoint;
 
     private int currentWave = 0;
@@ -23,10 +23,10 @@ public class EnemySpawner : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        countdown -= Time.deltaTime;
-        if (countdown <= 0)
+        numOfEnemies -= Time.deltaTime;
+        if (numOfEnemies <= 0)
         {
-            countdown = waves[currentWave].timeToNextWave;
+            numOfEnemies = waves[currentWave].timeToNextWave;
             StartCoroutine(SpawnWave());
         }
     }
